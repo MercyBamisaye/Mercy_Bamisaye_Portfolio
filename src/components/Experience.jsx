@@ -5,7 +5,7 @@ const experiences = [
   period: "2026 - Present",
   type: "Full-time",
   description:
-    "Supported product planning and execution by assisting in defining requirements, writing product documentation, and maintaining the product backlog. Collaborated with designers, engineers, and stakeholders to translate user needs into clear product specifications. Participated in user research, testing, and iterative improvements to enhance product usability and delivery."
+    "Supporting product planning and execution by assisting in defining requirements, writing product documentation, and maintaining the product backlog. Collaborating with designers, engineers, and stakeholders to translate user needs into clear product specifications. Participating in user research, testing, and iterative improvements to enhance product usability and delivery."
 },
   {
     role: "Frontend Developer",
@@ -50,7 +50,7 @@ const certifications = [
     date: "2024",
     category: "Frontend",
     color: "from-cyan-600 to-blue-600",
-    credentialUrl: "#",
+    credentialUrl: "https://drive.google.com/file/d/1IaMse71JDX2ilxhwWsuFDcVon4V9-jhs/view?usp=drive_link",
   },
   {
     title: "Introduction to JavaScript",

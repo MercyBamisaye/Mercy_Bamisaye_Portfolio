@@ -2,84 +2,113 @@ import { ExternalLink } from 'lucide-react'
 import { GithubIcon } from './SocialIcons'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
+import dimpifiedImg from '../assets/projects/dimpified.jpeg'
+import remsanaImg from '../assets/projects/remsana.jpeg'
+import unleashifiedImg from '../assets/projects/unleashified.jpeg'
+import adminImg from '../assets/projects/admin.dimpified.jpeg'
+import bycImg from '../assets/projects/byc.jpeg'
+import honsurgImg from '../assets/projects/honsurg.jpeg'
+
 const projects = [
   {
-    title: 'E-Commerce Dashboard',
+    title: 'Dimpified Platform',
     description:
-      'A full-featured admin dashboard for managing products, orders, and analytics. Built with React, TypeScript, and Recharts for data visualization.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Recharts'],
+      'A no.1 booking solution for service-based businesses. Enables professionals to accept bookings, manage schedules, and receive payments seamlessly while growing their business online.',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'API Integration'],
     github: null,
-    live: 'https://example.com',
+    live: 'https://dimpified.com/',
     gradient: 'from-violet-600 to-indigo-600',
-    emoji: '🛒',
+    image: dimpifiedImg,
   },
   {
-    title: 'Weather App',
+    title: 'Dimpified Admin Dashboard',
     description:
-      'Real-time weather application with beautiful UI, 7-day forecast, location search, and animated weather conditions using the OpenWeather API.',
-    tags: ['React', 'REST API', 'CSS Animations', 'Geolocation'],
+      'Internal admin system for managing the Dimpified ecosystem, including users, bookings, platform performance, and operational controls for the entire application.',
+    tags: ['React', 'Redux Toolkit', 'Dashboard UI', 'System Design'],
     github: null,
-    live: 'https://example.com',
-    gradient: 'from-cyan-600 to-blue-600',
-    emoji: '🌤️',
+    live: 'https://admin.dimpified.com/',
+    gradient: 'from-slate-700 to-indigo-600',
+    image: adminImg,
   },
   {
-    title: 'Task Management App',
+    title: 'Remsana Platform',
     description:
-      'A Kanban-style task manager with drag-and-drop, team collaboration, due dates, and priority levels. State managed with Redux Toolkit.',
-    tags: ['React', 'Redux Toolkit', 'DnD Kit', 'Tailwind CSS'],
+      'A complete business-building ecosystem for African SMEs — from business registration to banking access, credit support, and expert growth guidance, all in one place.',
+    tags: ['React', 'Product UI', 'API Integration', 'UX Design'],
     github: null,
-    live: 'https://example.com',
+    live: 'https://remsana.com/',
     gradient: 'from-emerald-600 to-teal-600',
-    emoji: '✅',
+    image: remsanaImg,
   },
   {
-    title: 'Portfolio Website',
+    title: 'Unleashified Platform',
     description:
-      'This very portfolio — built from scratch with React and Tailwind CSS, featuring smooth animations, a typing effect, and fully responsive design.',
-    tags: ['React', 'Tailwind CSS', 'Vite', 'Lucide Icons'],
-    github: 'https://github.com/MercyBamisaye',
-    live: 'https://example.com',
+      'A digital transformation platform helping startups and SMEs automate operations, manage workflows, and scale using structured digital products tailored for African businesses.',
+    tags: ['React', 'Frontend Architecture', 'API Integration'],
+    github: null,
+    live: 'https://unleashified.com/',
     gradient: 'from-pink-600 to-rose-600',
-    emoji: '🚀',
+    image: unleashifiedImg,
   },
   {
-    title: 'Blog Platform',
+    title: 'Believers Youth Convention',
     description:
-      'A Next.js blog platform with MDX support, dark mode, tag filtering, search functionality, and SEO-optimized static generation.',
-    tags: ['Next.js', 'MDX', 'TypeScript', 'Tailwind CSS'],
+      'Event website for a youth convention featuring schedules, announcements, media updates, and registration flow for attendees and organizers.',
+    tags: ['React', 'Responsive Design', 'UI/UX'],
     github: null,
-    live: 'https://example.com',
+    live: 'https://believersyouthconventionakure.com.ng/',
     gradient: 'from-amber-600 to-orange-600',
-    emoji: '📝',
+    image: bycImg,
   },
   {
-    title: 'Movie Discovery App',
+    title: 'Honsurg Shoes',
     description:
-      'Browse and discover movies using the TMDB API. Features infinite scroll, genre filters, watchlist with local storage persistence, and trailer previews.',
-    tags: ['React', 'TMDB API', 'React Query', 'Framer Motion'],
+      'E-commerce platform for a footwear brand showcasing products, collections, and brand identity with a smooth shopping experience.',
+    tags: ['React', 'E-commerce UI', 'Product Design'],
     github: null,
-    live: 'https://example.com',
-    gradient: 'from-red-600 to-pink-600',
-    emoji: '🎬',
+    live: 'https://honsurg-ssff.vercel.app/',
+    image: honsurgImg,
+    gradient: 'from-cyan-600 to-blue-600',
   },
 ]
 
-function ProjectCard({ title, description, tags, github, live, gradient, emoji, visible, delay }) {
+function ProjectCard({
+  title,
+  description,
+  tags,
+  github,
+  live,
+  gradient,
+  image,
+  visible,
+  delay,
+}) {
   return (
     <article
       className={`card group flex flex-col reveal ${visible ? 'visible' : ''}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className={`h-36 sm:h-40 rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center text-5xl sm:text-6xl mb-5 shadow-inner group-hover:scale-[1.02] transition-transform duration-300`}>
-        {emoji}
+      {/* IMAGE AREA (FIXED) */}
+      <div
+        className={`h-36 sm:h-40 rounded-xl mb-5 overflow-hidden shadow-inner bg-gradient-to-br ${gradient}`}
+      >
+        {image && (
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        )}
       </div>
+
       <h3 className="text-slate-900 dark:text-white font-bold text-lg sm:text-xl mb-2 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
         {title}
       </h3>
+
       <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4 flex-1">
         {description}
       </p>
+
       <div className="flex flex-wrap gap-2 mb-5">
         {tags.map((tag) => (
           <span
@@ -90,6 +119,7 @@ function ProjectCard({ title, description, tags, github, live, gradient, emoji, 
           </span>
         ))}
       </div>
+
       <div className="flex gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
         <a
           href={live}
@@ -99,6 +129,7 @@ function ProjectCard({ title, description, tags, github, live, gradient, emoji, 
         >
           <ExternalLink size={15} /> Live Demo
         </a>
+
         {github && (
           <a
             href={github}
@@ -123,13 +154,21 @@ export default function Projects() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-1 bg-gradient-to-r from-transparent via-violet-500/30 to-transparent" />
 
       <div className="max-w-6xl mx-auto relative">
-        <div ref={headRef} className={`text-center mb-12 sm:mb-16 reveal ${headVisible ? 'visible' : ''}`}>
-          <p className="text-violet-600 dark:text-violet-400 font-semibold text-sm uppercase tracking-widest mb-3">Portfolio</p>
+        <div
+          ref={headRef}
+          className={`text-center mb-12 sm:mb-16 reveal ${headVisible ? 'visible' : ''}`}
+        >
+          <p className="text-violet-600 dark:text-violet-400 font-semibold text-sm uppercase tracking-widest mb-3">
+            Portfolio
+          </p>
           <h2 className="section-heading">Featured Projects</h2>
           <div className="w-16 h-1 bg-gradient-to-r from-violet-600 to-indigo-500 rounded-full mx-auto mt-2" />
         </div>
 
-        <div ref={gridRef} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        <div
+          ref={gridRef}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6"
+        >
           {projects.map((project, i) => (
             <ProjectCard
               key={project.title}
@@ -140,8 +179,16 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className={`text-center mt-10 sm:mt-12 reveal ${gridVisible ? 'visible' : ''}`} style={{ transitionDelay: '500ms' }}>
-          <a href="https://github.com/MercyBamisaye" target="_blank" rel="noreferrer" className="btn-outline">
+        <div
+          className={`text-center mt-10 sm:mt-12 reveal ${gridVisible ? 'visible' : ''}`}
+          style={{ transitionDelay: '500ms' }}
+        >
+          <a
+            href="https://github.com/MercyBamisaye"
+            target="_blank"
+            rel="noreferrer"
+            className="btn-outline"
+          >
             <GithubIcon size={18} /> View All on GitHub
           </a>
         </div>

@@ -84,9 +84,13 @@ export default function Hero() {
             View My Work <ArrowDown size={15} />
           </a>
           <a href="#contact" className="btn-outline text-sm sm:text-base">Get In Touch</a>
-          <a href="#" download className="btn-outline text-sm sm:text-base">
-            <Download size={15} /> Resume
-          </a>
+          <a
+  href="/Mercy_Bamisaye_CV.pdf"
+  download="Mercy_Bamisaye_Product_Manager_Frontend_Developer_CV.pdf"
+  className="btn-outline text-sm sm:text-base"
+>
+  <Download size={15} /> Resume
+</a>
         </div>
 
         {/* Socials */}
