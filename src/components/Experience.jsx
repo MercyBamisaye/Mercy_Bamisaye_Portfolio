@@ -1,34 +1,79 @@
 const experiences = [
- {
-  role: "Product Manager Intern",
-  company: "Int+ co.",
-  period: "2026 - Present",
-  type: "Full-time",
-  description:
-    "Supporting product planning and execution by assisting in defining requirements, writing product documentation, and maintaining the product backlog. Collaborating with designers, engineers, and stakeholders to translate user needs into clear product specifications. Participating in user research, testing, and iterative improvements to enhance product usability and delivery.",
-  techs: ["Product Requirements", "Backlog Management", "User Research", "Stakeholder Collaboration"],
-},
+  {
+    role: "Product Manager",
+    company: "Int+ Technology",
+    period: "Oct 2025 - Present",
+    type: "Full-time",
+    bullets: [
+      "Manage and support digital products from discovery and requirements definition through evaluation, delivery, testing, client feedback, and continuous improvement.",
+      "Translate business and user needs into clear product requirements, feature specifications, user flows, and implementation-ready documentation.",
+      "Conduct user and market research to assess product-market fit, identify customer needs, validate product opportunities, and inform product decisions.",
+      "Evaluate products against business requirements, usability expectations, and market needs before recommending suitable solutions to clients.",
+      "Work closely with designers and developers to clarify requirements, review implementations, track product progress, and support delivery of approved features.",
+      "Coordinate product feedback, testing, issue identification, and refinement to ensure delivered features align with agreed requirements and expected outcomes.",
+      "Support client-facing product recommendations by connecting identified business problems with relevant product capabilities and implementation opportunities.",
+    ],
+    techs: ["Product Discovery", "Requirements & Specs", "Market Research", "Product Evaluation", "Delivery Coordination"],
+  },
+  {
+    role: "Product Operations",
+    company: "Int+ Technology",
+    period: "May 2025 - Sept 2025",
+    type: "Internship",
+    bullets: [
+      "Supported product operations, requirements gathering, product research, documentation, testing, and coordination across product delivery activities.",
+      "Worked with product, design, and engineering stakeholders to understand requirements and translate business needs into actionable product tasks.",
+      "Participated in product reviews, market research, feature evaluation, and feedback analysis to identify opportunities for product improvement.",
+      "Supported QA/UAT activities by reviewing features against requirements, documenting issues, and communicating findings for resolution.",
+      "Contributed to product documentation, workflow analysis, and Agile delivery processes while developing progressively broader product management responsibilities.",
+    ],
+    techs: ["Product Operations", "QA / UAT", "Documentation", "Agile"],
+  },
   {
     role: "Frontend Developer",
     company: "GFA Technologies",
-    period: "2024 - Present",
+    period: "July 2024 - Present",
     type: "Full-time",
-    description:
-      "Built and maintained client-facing websites and web applications for various industries. Collaborated closely with designers to implement pixel-perfect UIs. Integrated third-party APIs and payment gateways.",
-    techs: ["React", "JavaScript", "CSS", "REST APIs"],
+    bullets: [
+      "Collaborate with product, design, and engineering stakeholders to translate requirements and UI/UX concepts into responsive digital experiences.",
+      "Develop and maintain responsive features for mobile and desktop platforms using HTML, CSS, JavaScript, React, and Next.js.",
+      "Contribute ideas for new features and improvements based on client feedback, user interactions, and product observations.",
+      "Integrate RESTful APIs and collaborate with backend developers to improve product functionality and deliver new features.",
+      "Use Git and modern development practices to manage code changes, resolve issues, and maintain reliable product releases.",
+      "Develop reusable templates and interfaces for SMEs and business owners, strengthening practical understanding of user needs and product usability.",
+    ],
+    techs: ["React", "Next.js", "JavaScript", "HTML/CSS", "REST APIs", "Git"],
   },
   {
-    role: "Frontend Intern",
+    role: "Frontend Developer (Intern)",
     company: "GFA Technologies",
-    period: "2024",
+    period: "Jan 2024 - June 2024",
     type: "Internship",
-    description:
-      "Developed reusable UI components and landing pages. Assisted in migrating a legacy jQuery codebase to React. Participated in daily standups and code reviews.",
+    bullets: [
+      "Built and refined frontend interfaces, debugged application issues, collaborated with designers, integrated APIs, and contributed feature improvement ideas based on user and client feedback.",
+    ],
     techs: ["HTML", "CSS", "JavaScript", "React"],
+  },
+  {
+    role: "Graduate Intern (National Youth Service Corps)",
+    company: "Kwara Poly Secondary School, Ilorin, Kwara State",
+    period: "April 2024 - March 2025",
+    type: "NYSC",
+    bullets: [
+      "Designed and delivered structured learning experiences, coordinated groups, monitored progress, and collaborated with staff on planning and student development initiatives.",
+    ],
   },
 ]
 
 const certifications = [
+  {
+    title: "Cisco",
+    issuer: "Cisco Networking Academy",
+    date: "2018",
+    category: "Cisco",
+    color: "from-violet-600 to-indigo-600",
+    credentialUrl: "#",
+  },
   {
     title: "Frontend Web Development",
     issuer: "Coursera / Meta",
@@ -143,15 +188,22 @@ export default function Experience() {
                     </div>
                     <div className="text-right flex-shrink-0">
                       <div className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm">{exp.period}</div>
-                      <span className="inline-block mt-1 text-xs bg-violet-600/10 text-violet-600 dark:text-violet-400 border border-violet-500/20 px-2 py-0.5 rounded-full">
-                        {exp.type}
-                      </span>
+                      {exp.type && (
+                        <span className="inline-block mt-1 text-xs bg-violet-600/10 text-violet-600 dark:text-violet-400 border border-violet-500/20 px-2 py-0.5 rounded-full">
+                          {exp.type}
+                        </span>
+                      )}
                     </div>
                   </div>
 
-                  <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">
-                    {exp.description}
-                  </p>
+                  <ul className="space-y-2 mb-4">
+                    {exp.bullets.map((point) => (
+                      <li key={point} className="flex gap-2.5 text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        <span className="w-1.5 h-1.5 rounded-full bg-violet-500 flex-shrink-0 mt-2" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
 
                   <div className="flex flex-wrap gap-2">
                     {exp.techs?.map((tech) => (
