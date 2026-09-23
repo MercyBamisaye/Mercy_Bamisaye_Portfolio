@@ -11,7 +11,7 @@ const stats = [
 ]
 
 const highlights = [
-  { icon: MapPin, text: 'Based in Ado Ekiti, Nigeria', color: 'from-violet-600 to-indigo-600' },
+  { icon: MapPin, text: 'Based in Oyo State, Nigeria', color: 'from-violet-600 to-indigo-600' },
   { icon: Coffee, text: 'Fuelled by curiosity', color: 'from-amber-500 to-orange-500' },
   { icon: BookOpen, text: 'Always learning something new', color: 'from-emerald-500 to-teal-600' },
   { icon: Zap, text: 'Fast, clean, accessible code', color: 'from-pink-500 to-rose-500' },

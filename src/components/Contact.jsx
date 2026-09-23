@@ -62,7 +62,7 @@ export default function Contact() {
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-violet-500/20">
                 <MapPin size={15} className="text-white" />
               </div>
-              <span className="text-slate-600 dark:text-slate-300 text-sm">Ado Ekiti, Nigeria</span>
+              <span className="text-slate-600 dark:text-slate-300 text-sm">Oyo State, Nigeria</span>
             </div>
             <div className="flex items-center gap-3 mb-10">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/20">
