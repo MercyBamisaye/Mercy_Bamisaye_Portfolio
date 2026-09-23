@@ -2,6 +2,17 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const skillGroups = [
   {
+    category: 'Product Management',
+    icon: '🧭',
+    gradient: 'from-pink-600 to-rose-600',
+    skills: [
+      { name: 'Requirements & PRDs', level: 90, color: 'from-pink-500 to-rose-500' },
+      { name: 'Market & User Research', level: 85, color: 'from-amber-500 to-orange-500' },
+      { name: 'Backlog & Roadmapping', level: 85, color: 'from-violet-600 to-indigo-600' },
+      { name: 'Stakeholder Management', level: 88, color: 'from-emerald-500 to-teal-500' },
+    ],
+  },
+  {
     category: 'Languages',
     icon: '🌐',
     gradient: 'from-violet-600 to-indigo-600',
@@ -40,6 +51,7 @@ const techBadges = [
   'React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'JavaScript', 'HTML5', 'CSS3',
   'Node.js', 'Git', 'GitHub', 'Figma', 'REST API', 'Vite', 'Redux', 'React Query',
   'Framer Motion', 'Responsive Design', 'Web Accessibility',
+  'Agile / Scrum', 'Product Evaluation', 'Delivery Coordination', 'User Testing',
 ]
 
 function SkillBar({ name, level, color, visible, delay }) {
@@ -81,7 +93,7 @@ export default function Skills() {
           <div className="gradient-divider" />
         </div>
 
-        <div ref={cardsRef} className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-14">
+        <div ref={cardsRef} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
           {skillGroups.map(({ category, icon, gradient, skills }, gi) => (
             <div
               key={category}

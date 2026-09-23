@@ -5,7 +5,8 @@ const experiences = [
   period: "2026 - Present",
   type: "Full-time",
   description:
-    "Supporting product planning and execution by assisting in defining requirements, writing product documentation, and maintaining the product backlog. Collaborating with designers, engineers, and stakeholders to translate user needs into clear product specifications. Participating in user research, testing, and iterative improvements to enhance product usability and delivery."
+    "Supporting product planning and execution by assisting in defining requirements, writing product documentation, and maintaining the product backlog. Collaborating with designers, engineers, and stakeholders to translate user needs into clear product specifications. Participating in user research, testing, and iterative improvements to enhance product usability and delivery.",
+  techs: ["Product Requirements", "Backlog Management", "User Research", "Stakeholder Collaboration"],
 },
   {
     role: "Frontend Developer",

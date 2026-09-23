@@ -7,7 +7,7 @@ const stats = [
   { value: 3, suffix: '+', label: 'Years Experience', gradient: 'from-violet-600 to-indigo-600' },
   { value: 20, suffix: '+', label: 'Projects Done', gradient: 'from-pink-600 to-rose-500' },
   { value: 10, suffix: '+', label: 'Happy Clients', gradient: 'from-emerald-600 to-teal-500' },
-  { value: 10, suffix: 'k+', label: 'GitHub Commits', gradient: 'from-amber-500 to-orange-500' },
+  { value: 6, suffix: '', label: 'Products Managed', gradient: 'from-amber-500 to-orange-500' },
 ]
 
 const highlights = [
@@ -93,7 +93,7 @@ export default function About() {
           {/* Bio */}
           <div ref={rightRef} className={`reveal-right ${rightVisible ? 'visible' : ''}`}>
             <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-4">
-              Frontend Developer &amp; UI Craftsman
+              Product Manager &amp; Frontend Developer
             </h3>
             <p className="text-slate-500 dark:text-slate-400 leading-relaxed mb-4 text-sm sm:text-base">
               I&apos;m a passionate frontend developer with over 3 years of experience building modern,
@@ -101,9 +101,10 @@ export default function About() {
               with a strong eye for design and user experience.
             </p>
             <p className="text-slate-500 dark:text-slate-400 leading-relaxed mb-8 text-sm sm:text-base">
-              When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to open
-              source projects, or mentoring aspiring developers. I believe great software is built
-              at the intersection of clean code and thoughtful design.
+              As a product manager, I own products end to end across AI, fintech, legaltech, and
+              edtech: market research, requirements, stakeholder alignment, and delivery coordination.
+              Because I also write code, I bridge business goals and engineering reality, and I
+              believe great products are built where clear strategy meets thoughtful design.
             </p>
 
             <ul className="space-y-3 mb-8">

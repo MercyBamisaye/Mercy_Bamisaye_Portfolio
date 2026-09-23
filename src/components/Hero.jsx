@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { ArrowDown, Download, Sparkles } from 'lucide-react'
 import { GithubIcon, LinkedinIcon, TwitterIcon } from './SocialIcons'
 
-const roles = ['Frontend Developer', 'React Specialist', 'Product Management Enthusiast', 'Open Source Contributor']
+const roles = ['Product Manager', 'Frontend Developer', 'React Specialist', 'Builder of Useful Products']
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0)
@@ -74,13 +74,13 @@ export default function Hero() {
         </div>
 
         <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed animate-fade-in-up px-2" style={{ animationDelay: '0.25s' }}>
-          I craft beautiful, performant, and accessible web experiences. Passionate about turning
-          complex problems into clean, elegant interfaces that people love to use.
+          I manage products from idea to delivery and build the interfaces people use. Product
+          thinking and hands-on frontend skills, so what gets planned is what gets shipped.
         </p>
 
         {/* CTAs */}
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.35s' }}>
-          <a href="#projects" className="btn-primary text-sm sm:text-base">
+          <a href="#product" className="btn-primary text-sm sm:text-base">
             View My Work <ArrowDown size={15} />
           </a>
           <a href="#contact" className="btn-outline text-sm sm:text-base">Get In Touch</a>
